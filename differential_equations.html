@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="https://latex.now.sh/style.css">
+    <title>Differential Equations</title>
+</head>
+
+<body>
+    <h1>Differential Equations</h1>
+
+    <h4>What are differential equations?</h4>
+    <p>A differential equation is any equation involving the derivatives of an unknown function, and its solution is the infinite family of functions that make the equation true. For examples, given the differential equation\(\dots\)</p>
+    \[ \frac{dy}{dx} = x^2 \]
+    <p>\(\dots\)we can simply integrate both sides to find that\(\dots\)</p>
+    \[ y = \frac{1}{3}x^3 + C \]
+    <p>This represents the general family of solutions that solve the differential equation, however if we were asked to find a specific solution given an initial condition, we would then have to solve for the specific value of \(C\).</p>
+    <p>A differential equation's order refers to the highest derivative that it contains. For example, the differential equation we looked at above is order 1, however the one below is order 2 since it contains a second-derivative.</p>
+    \[ \frac{d^2y}{dx^2} = 2\cos(2x)\]
+    <p>The general solution to a differential equation will always contain an equal number of arbitrary constants as its order. This makes sense if we consider that in order to solve a given equation we would have to integrate a number of times equal to its order and each integration would introduce a new constant.</p>
+</body>
+
+<footer>
+    <p>
+        <script>
+            var lastModified = new Date(document.lastModified);
+            var date = lastModified.getMonth() + 1 + "/" + lastModified.getDate() + "/" + lastModified.getFullYear();
+            document.write("Last modified on " + date + ".");
+        </script>
+        Please report any issues to <a href="mailto:elijah.m.kin@gmail.com">elijah.m.kin@gmail.com</a>!
+    </p>
+</footer>
+
+</html>

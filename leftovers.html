@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="https://latex.now.sh/style.css">
+    <title>Eli's Calculus Compendium</title>
+</head>
+
+<body>
+    <h1>Eli's Calculus Compendium</h1>
+
+    <h4>Pythagorean Identities</h4>
+    <p>Write</p>
+    <ul>
+        <li>\(\sin^2(x)+\cos^2(x)=1\)</li>
+        <li>\(1+\tan^2(x)=\sec^2(x)\)</li>
+        <li>\(1+\cot^2(x)=\csc^2(x)\)</li>
+    </ul>
+
+    <h4>Angle Sum-Difference Indentities</h4>
+    <p>Write</p>
+    <ul>
+        <li>\(\sin(\alpha\pm\beta)=\sin(\alpha)\cos(\beta)\pm\cos(\alpha)\sin(\beta)\)</li>
+        <li>\(\cos(\alpha\pm\beta)=\cos(\alpha)\cos(\beta)\mp\sin(\alpha)\sin(\beta)\)</li>
+        <li>\(\tan(\alpha\pm\beta)=\frac{\tan(\alpha)\pm\tan(\beta)}{1\mp\tan(\alpha)\tan(\beta)}\)</li>
+    </ul>
+
+    <h4>Double Angle Identities</h4>
+    <p>The double angle identities are special cases of the angle sum-difference identities that are often useful
+        when integrating expressions involving trigonometric functions. Note that via the first pythagorean
+        identity, two additional cosine double angle indentities can be derived.</p>
+    <ul>
+        <li>\(\sin(2x)=2\sin(x)\cos(x)\)</li>
+        <li>\(\cos(2x)=\cos^2(x)-\sin^2(x)\)</li>
+        <li>\(\tan(2x)=\frac{2\tan(x)}{1-\tan^2(x)}\)</li>
+    </ul>
+
+    <h4>Power Reduction Identities</h4>
+    <p>Write</p>
+    <ul>
+        <li>\(\sin^2(x)=\frac{1-\cos(2x)}{2}\)</li>
+        <li>\(\cos^2(x)=\frac{1+\cos(2x)}{2}\)</li>
+        <li>\(\tan^2(x)=\frac{1-\cos(2x)}{1+\cos(2x)}\)</li>
+    </ul>
+
+    <h4>Limit Definition of the Derivative</h4>
+    <p>Write</p>
+    \[ f'(x) = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} \]
+
+    <h4>The Power Rule</h4>
+    <p>Write</p>
+    \[ \frac{d}{dx} x^n = n\cdot x^{n-1} \]
+    <p>From the power rule (and the chain rule), it can be shown that the derivative of any constant is \( 0 \).</p>
+    \[ \frac{d}{dx} c = 0\]
+
+    <h4>The Constant Multiple Rule</h4>
+    <p>The constant multiple rule states that any constants by which function is multiplied by can be pulled out
+        of the differential operator and multiplied by the derivative after differentiation.</p>
+    \[ \frac{d}{dx}(c\cdot f(x)) = c\cdot f'(x) \]
+
+    <h4>The Chain Rule</h4>
+    <p>The chain rule is used to find the derivative of composed functions.</p>
+    \[ \frac{d}{dx} f(g(x)) = f'(g(x))g'(x) \]
+
+    <h4>The Sum-Difference Rule</h4>
+    <p>The sum-difference rule states that in order to take the derivative of the sum or difference of two functions,
+        simply take the derivative of each independently, then add or subtract them.</p>
+    \[ \frac{d}{dx} (f(x) \pm g(x)) = f'(x) \pm g'(x) \]
+
+    <h4>The Product Rule</h4>
+    <p>The product rule is used to take the derivative of two functions multiplied together.</p>
+    \[ \frac{d}{dx} f(x)g(x) = f'(x)g(x) + f(x)g'(x) \]
+
+    <h4>The Quotient Rule</h4>
+    <p>The quotient rule is used to take the derivative of two functions divided by each other. Note that any derivative
+        found by the
+        quotient rule can also be found by the product rule, just that the quotient rule simplifies the process.</p>
+    \[ \frac{d}{dx} \frac{f(x)}{g(x)} = \frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2} \]
+</body>
+
+<footer>
+    <p>
+        <script>
+            var lastModified = new Date(document.lastModified);
+            var date = lastModified.getMonth() + 1 + "/" + lastModified.getDate() + "/" + lastModified.getFullYear();
+            document.write("Last modified on " + date + ".");
+        </script>
+        Please report any issues to <a href="mailto:elijah.m.kin@gmail.com">elijah.m.kin@gmail.com</a>!
+    </p>
+</footer>
+
+</html>

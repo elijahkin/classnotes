@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="https://latex.now.sh/style.css">
+    <title>Multivariable Calculus</title>
+</head>
+
+<body>
+    <h1>Multivariable Calculus</h1>
+
+    <h4>Vectors</h4>
+    <p>Vectors are quantities that have both magnitude and direction — think of them as arrows that point from
+        the origin to a certain point in space. A vector's direction is literally the direction in which the arrow
+        points, while
+        its magnitude is the arrow's length. Vectors can have any number of dimensions (in this course though, we mostly
+        deal with 2-D and 3-D vectors), and for each dimension, the vector has an associated number, called a component,
+        that is, a 3-D vector has 3 components. Below, we the several varieties of vector notation.
+    </p>
+    \[ \vec{v} = \left\langle v_1, v_2, v_3 \right\rangle = v_1\hat{i} + v_2\hat{j} + v_3\hat{k}\]
+    <p>The vector itself is represented by a letter with an over-arrow, while there are two methods of listing a
+        vector's components. The first is to simply list out all the components within angle brackets, while the second
+        is a bit
+        more complicated, so we'll come to it later.</p>
+    <p>A vector's magnitude is notated with vertical pipes and is computed
+        by taking the square root of the sum of the square of each component. This equation can readily be derived from
+        the distance formula.</p>
+    \[ \lVert \vec{v} \rVert = \sqrt{{v_1}^2+{v_2}^2+{v_3}^2}\]
+    <p>The term "unit vector" refers to vectors whose magnitudes are exactly 1 and have a special notation — instead of
+        the over-arrow that most vectors have, unit vectors wear a hat, as in \(\hat{u}\).</p>
+    <p>Vectors are added and subtracted component-wise, that is, corresponding components are added or subtracted to
+            produce a resultant vector.</p>
+        \[ \vec{v} \pm \vec{w} = \left\langle v_1 \pm w_1, v_2 \pm w_2, v_3 \pm w_3 \right\rangle\]
+
+    <h4>Dot Product</h4>
+    <p>The dot product is one way of multiplying two vectors and is sometimes called the scalar product because produces
+        a
+        scalar value. It is computed by adding the products of the corresponding components of the vectors.</p>
+    \[ \vec{v} \cdot \vec{w} = \left\langle v_1, v_2, v_3 \right\rangle \cdot \left\langle w_1, w_2, w_3 \right\rangle =
+    v_1w_1 + v_2w_2 + v_3w_3\]
+
+    <h4>Cross Product</h4>
+    <p>The cross product is the other way of multiply two vectors and is also known as the vector product since it produces a vector.</p>
+    \[ \vec{v} \times \vec{w} = \left\langle v_1, v_2, v_3 \right\rangle \times \left\langle w_1, w_2, w_3 \right\rangle
+    = \left\langle v_2w_3-v_3w_2, v_3w_1 - v_1w_3, v_1w_2 - v_2w_1 \right\rangle\]
+
+    <h4>Vector-Valued Functions</h4>
+    <p>Vector valued functions are functions that take a single input (often time) whose outputs are vectors. These functions are particularly excellent for modeling the movement of a particle, since they output vectors that point to different points in space for every value of time.</p>
+    \[ \vec{r}(t) = \left\langle x(t), y(t), z(t) \right\rangle \]
+
+    <h4>Multivariable Functions</h4>
+    <p>Below is an example of a three variable function.</p>
+    \[ f(x, y, z) = \frac{5x}{(y+z)^2} \]
+
+    <h4>Partial Derivatives</h4>
+    <p>Partial derivatives are used to find the rate of change of multivariable functions along the Cartesian axes.
+        Finding the partial derivative of a function with respect to a certain variable is largely the same as normal
+        differentiation with the exception that any other variables should be treated as constants. There are two
+        notations for partial derivatives, \( \frac{\partial f}{\partial x} \) and \( f_x \). Both express the partial
+        of \( f \) with respect to \( x \).</p>
+    \[ f(x, y) = x^2y^3, f_x(x, y)= 2xy^3, f_y(x, y) = 3x^2y \]
+
+    <h4>Tangent Planes</h4>
+    <p>Partial derivatives can be used to approximate multivariable functions by creating a tangent plane about a
+        point, much like regular derivatives can approximate single-variable function by creating a tangent line. The
+        general equation for a plane tangent to \(f(x, y)\) at the point \((a, b)\) is below.</p>
+    \[ z = f(a, b) + f_x(a, b)(x - a) + f_y(a, b)(y - b) \]
+
+    <h4>Del Operator</h4>
+    <p>The \( \nabla \) operator, pronounced del, is the vector differential operator and is used to find the gradient,
+        divergence, and curl. The operator itself is a vector whose components are partial differential operators.
+        Although it can be any number of dimensions, it's most commonly two or three.</p>
+    \[ \nabla = \left\langle \frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z}
+    \right\rangle \]
+
+    <h4>Gradient</h4>
+    <p>The gradient is essentially the derivative of a multivariable function and is found by multiplying \( \nabla \)
+        with a multivariable function. Since the output of a multivariable function is a scalar and \( \nabla \) is a
+        vector, the gradient is simply the vector whose components are the partials of the function.</p>
+    \[ \nabla f(x, y, z) = \left\langle \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial
+    f}{\partial z} \right\rangle \]
+    <p>Once the gradient is found, it can be evaluated at any point simply by plugging in values for \( x \), \( y \),
+        \( z \), etc. Interestingly, the vector produced by the gradient at any given point is said to point in the
+        direction of maximum ascent, while its magnitude is the rate of increase in that direction.</p>
+
+    <h4>Directional Derivatives</h4>
+    <p>Although partial derivatives may be used to find the rate of change of a multivariable function along the
+        Cartesian
+        axes, directional derivatives must be used to find the rate of change in other directions. For any unit vector
+        \(\hat{u}\), the rate of change of \(f(x, y, z)\) in that direction is found via the dot product of the
+        gradient and \(\hat{u}\).
+    </p>
+    \[ D_{\hat{u}} f(x, y, z) = \nabla f(x, y, z) \cdot \hat{u}\]
+
+    <h4>Vector Fields</h4>
+    <p>Text</p>
+    \[ \]
+
+    <h4>Divergence</h4>
+    <p>Text</p>
+    \[ \text{div}\,\vec{F}=\nabla\cdot\vec{F} \]
+
+    <h4>Curl</h4>
+    <p>Text</p>
+    \[ \text{curl}\,\vec{F}=\nabla\times\vec{F} \]
+
+    <h4>Line Integrals</h4>
+    <p>Text</p>
+    \[ \]
+
+    <h4>Green's Theorem</h4>
+    <p>Text</p>
+    \[ \int_{C} P\,dx+Q\,dy = \iint_{D}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)\,dA \]
+
+    <h4>Stokes' Theorem</h4>
+    <p>Text</p>
+    \[ \int_{C}\vec{F}\cdot d\vec{r}=\iint_{S}\text{curl}\,\vec{F}\cdot d\vec{S} \]
+
+    <h4>Divergence Theorem</h4>
+    <p>Text</p>
+    \[ \iint_S\vec{F}\cdot d\vec{S}=\iiint_{E}\text{div}\,\vec{F}\,dV \]
+
+    <h4>To Add</h4>
+    <ul>
+        <li>Arclength</li>
+        <li>Curvature</li>
+        <li>Multivariable Limits</li>
+        <li>Multiple Integrals</li>
+        <li>Surface Integrals</li>
+    </ul>
+
+</body>
+
+<footer>
+    <p>
+        <script>
+            var lastModified = new Date(document.lastModified);
+            var date = lastModified.getMonth() + 1 + "/" + lastModified.getDate() + "/" + lastModified.getFullYear();
+            document.write("Last modified on " + date + ".");
+        </script>
+        Please report any issues to <a href="mailto:elijah.m.kin@gmail.com">elijah.m.kin@gmail.com</a>!
+    </p>
+</footer>
+
+</html>
