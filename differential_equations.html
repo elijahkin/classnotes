@@ -4,6 +4,7 @@
 <head>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="stylesheet" href="https://latex.now.sh/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
     <script src="https://tikzjax.com/v1/tikzjax.js"></script>
     <title>Differential Equations</title>
@@ -24,11 +25,15 @@
 
     <h4>What are slope fields?</h4>
     <p>While many differential equations can be solved simply through integration, others pose more of a challenge and some are even impossible to solve analytically. However, there are several techniques to <i>approximate</i> solutions. Slope fields are one such way of (albeit very roughly) approximating solutions to differential equations.</p>
+    <p></p>
+    <img src="vector_field.svg" alt="Vector field example" class="center">
 
-    <img src="vector_field.svg" alt="Vector field example">
+    <p>The diagram above is a slope field where the tiny vector indicate the slope of the family of solutions at each point. Given a slope field diagram, one can easily approximate the solution to a differential at any initial condition simply by tracing out the path of the arrows. To create your own slope field diagram, you first must have a rate of change equation which relates the rate of change of a function to the function's independent and dependent variables, as seen below.</p>
+    \[\frac{dP}{dt}=f(t, P)\]
+    <p>Then, for as many points as you wish, plug in values of \(t\) and \(P\) to find the slope of the solution at that particular point. Then simply draw an arrow with that slope at that point and repeat until you feel you have a sufficient number of points to approximate your solution.</p>
 
     <h4>What is Euler's method?</h4>
-    <p>Euler's method is another, more analytic way of approximating differential equations. First, you must choose a step size, by which you'll repeatedly increment \(x\). Note that the closer your step size is to 0, the more accurate your approximation, but it will also be more tedious to compute. Suppose we are given the differential equation below and the accompanying inital condition.</p>
+    <p>Euler's method is another, more analytic way of approximating differential equations. First, choose a step size, by which you'll repeatedly increment \(x\). Note that the closer your step size is to 0, the more accurate your approximation, but it will also be more tedious to compute. Suppose we are given the differential equation below and the accompanying inital condition.</p>
     \[ \frac{dy}{dx} = \frac{1}{3}xy \;\;\;\;\;\;\;\;\; y(0) = 1 \]
     <p>You would start by making a table with three columns: \(x\), \(y\), and \(\frac{dy}{dx}\). Use the given initial condition to fill in the first \(x\) and the first \(y\) value. The rest of the \(x\) column can then be completed by repeatedly incrementing the initial value of \(x\) by the step size. In the example table below, a step size of 0.5 is used.</p>
     <p>Next, find the first value of \(\frac{dy}{dx}\) by evaluating the right hand side of the given differential equation with the first \(x\) and \(y\). Then add the product of that \(\frac{dy}{dx}\) value and the step size to the current \(y\) value to find the next \(y\) and continue finding and adding such products until the table is complete.</p>
