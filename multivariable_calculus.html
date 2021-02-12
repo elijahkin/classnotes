@@ -46,20 +46,30 @@
     = \left\langle v_2w_3-v_3w_2, v_3w_1 - v_1w_3, v_1w_2 - v_2w_1 \right\rangle\]
 
     <h4>Vector-Valued Functions</h4>
-    <p>Vector valued functions are functions that take a single input (often time) whose outputs are vectors. These functions are particularly excellent for modeling the movement of a particle, since they output vectors that point to different points in space for every value of time.</p>
+    <p>Vector valued functions are functions that take a single input (often time) and output a vector. These functions are particularly handy for modeling the movement of a particle, since they output vectors that point to different points in space for every value of time.</p>
     \[ \vec{r}(t) = \left\langle x(t), y(t), z(t) \right\rangle \]
+    <p>Most operations, including differentiation and integration, are done component-wise for vector-valued functions. For example, the derivative of the vector-valued function \(\vec{r}(t)\) define above would be taken like so.</p>
+    \[\frac{d\vec{r}}{dt} = \left\langle \frac{dx}{dt}, \frac{dy}{dt}, \frac{dz}{dt}\right\rangle\]
+
+    <h4>Arclength</h4>
+    <p>Since vector-valued functions are often used to represent the paths of particles through space, one property we may wish to define how long that path is. Luckily, the arclength formula written below can tell us exactly that. The formula returns \(L\), the distance of the path \(\vec{r}(t)\) between the points where \(t=a\) and \(t=b\).</p>
+    \[ L = \int_a^b\,\left\lVert\frac{d\vec{r}}{dt}\right\rVert\,dt = \int_a^b \sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2+\left(\frac{dz}{dt}\right)^2}\,dt\]
+
+    <h4>Curvature</h4>
+    <p>Curvature is a measure of how fast a curve is changing direction at a given point, or more informally, how curvy it is. The rather unwieldy formula for curvature as a function of time is written below.</p>
+    \[ \kappa (t) = \frac{\left\lVert \frac{d\vec{r}}{dt} \times \frac{d^2\vec{r}}{dt^2} \right\rVert}{\left\lVert \frac{d\vec{r}}{dt} \right\rVert^3}\]
 
     <h4>Multivariable Functions</h4>
     <p>Below is an example of a three variable function.</p>
-    \[ f(x, y, z) = \frac{5x}{(y+z)^2} \]
+    \[ f(x, y) = \frac{5x}{y+1} \]
 
     <h4>Partial Derivatives</h4>
     <p>Partial derivatives are used to find the rate of change of multivariable functions along the Cartesian axes.
         Finding the partial derivative of a function with respect to a certain variable is largely the same as normal
         differentiation with the exception that any other variables should be treated as constants. There are two
         notations for partial derivatives, \( \frac{\partial f}{\partial x} \) and \( f_x \). Both express the partial
-        of \( f \) with respect to \( x \).</p>
-    \[ f(x, y) = x^2y^3, f_x(x, y)= 2xy^3, f_y(x, y) = 3x^2y \]
+        of \( f \) with respect to \( x \). Below are both of the partial derivatives of the multivariable function defined above.</p>
+    \[ f_x(x, y)= \frac{5}{y+1} \,\,\,\,\,\,\,\,\,\,\,\, f_y(x, y) = \frac{-5x}{(y+1)^2} \]
 
     <h4>Tangent Planes</h4>
     <p>Partial derivatives can be used to approximate multivariable functions by creating a tangent plane about a
@@ -123,8 +133,7 @@
 
     <h4>To Add</h4>
     <ul>
-        <li>Arclength</li>
-        <li>Curvature</li>
+        <li>Arclength Parameterization</li>
         <li>Multivariable Limits</li>
         <li>Multiple Integrals</li>
         <li>Surface Integrals</li>
