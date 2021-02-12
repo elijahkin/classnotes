@@ -34,6 +34,18 @@
     <p>Next, find the first value of \(\frac{dy}{dx}\) by evaluating the right hand side of the given differential equation with the first \(x\) and \(y\). Then add the product of that \(\frac{dy}{dx}\) value and the step size to the current \(y\) value to find the next \(y\) and continue finding and adding such products until the table is complete.</p>
     \[ \begin{array} {|r|r|}\hline x & y & \frac{dy}{dx} \\ \hline 0.0 & 1.000 & 0.000 \\ \hline 0.5 & 1.000 & 0.167 \\ \hline 1.0 & 1.083 & 0.361 \\ \hline 1.5 & 1.264 & 0.632 \\ \hline 2.0 & 1.580 & 1.053 \\ \hline  \end{array} \]
     <p>With this table, we can estimate the values of the solution to the original differential equation at various \(x\) values, for example, we would predict its value at \(x\) = 2 to be 1.580. However, in reality, its true value is \(e^{2/3}\) or approximately 1.947. Notice that our estimation is quite far from the true value. This is because our step size, 0.5, is quite large. If our step size were 0.01, we would have arrived at a much closer estimation of 1.938, but it would have also taken 50 times as many steps to arrive at our answer. Thus, when using Euler's method it is critical to weigh the importance of accuracy against that of efficiency.</p>
+
+    <h4>What are integrating factors?</h4>
+    <p>Using an integrating factor allows us to manipulate the product rule in order to more easily solve a differential equation. This method is most effective when the equation is written in standard form, that is of the form below.</p>
+    \[y' + p(t)y=g(t)\]
+    <p>Often equations will not initially be in standard form, but can be achieved through simple algebraic manipulation. Once in standard form, we multiply every term in the equation by \(\mu (t)\), called the integrating factor.</p>
+    \[\mu (t)y' + \mu (t)p(t)y=\mu (t)g(t)\]
+    <p>Now, the left hand side of the differential equation very closely resembles the product rule. Thus follows the below equation.</p>
+    \[\mu '(t)=\mu (t)p(t)\]
+    <p>We need only solve this new second differential equation for \(\mu (t)\), and once it is known, we can rewrite the intial differential equation with the product rule as seen below.</p>
+    \[\frac{d}{dt}\left[\mu (t)y\right]=\mu (t)g(t)\]
+    <p>Finally, we can integrate both sides with respect to \(t\) and solve for \(y\) to find the below solution to the original differential equation.</p>
+    \[y=\frac{1}{\mu (t)}\int\mu (t)g(t)dt\]
 </body>
 
 <footer>

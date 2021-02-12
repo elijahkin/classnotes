@@ -4,21 +4,48 @@
 <head>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="stylesheet" href="https://latex.now.sh/style.css">
-    <title>Differential Equations</title>
+    <title>Mechanics & Thermodynamics</title>
 </head>
 
 <body>
-    <h1>Differential Equations</h1>
+    <h1>Mechanics & Thermo</h1>
 
-    <h4>What are differential equations?</h4>
-    <p>A differential equation is any equation involving the derivatives of an unknown function, and its solution is the infinite family of functions that make the equation true. For examples, given the differential equation\(\dots\)</p>
-    \[ \frac{dy}{dx} = x^2 \]
-    <p>\(\dots\)we can simply integrate both sides to find that\(\dots\)</p>
-    \[ y = \frac{1}{3}x^3 + C \]
-    <p>This represents the general family of solutions that solve the differential equation, however if we were asked to find a specific solution given an initial condition, we would then have to solve for the specific value of \(C\).</p>
-    <p>A differential equation's order refers to the highest derivative that it contains. For example, the differential equation we looked at above is order 1, however the one below is order 2 since it contains a second-derivative.</p>
-    \[ \frac{d^2y}{dx^2} = 2\cos(2x)\]
-    <p>The general solution to a differential equation will always contain an equal number of arbitrary constants as its order. This makes sense if we consider that in order to solve a given equation we would have to integrate a number of times equal to its order and each integration would introduce a new constant.</p>
+    <h4>Physical Measurements</h4>
+    <ul>
+        <li>Length is measured in meters (m).</li>
+        <li>Mass is measured in kilograms (kg). Mass is a measure of the inertia of an object, sometimes understand as the quantity of matter in the objects. Mass is <b>NOT</b> weight.</li>
+        <li>Time is measured in seconds (s).</li>
+    </ul>
+
+    <h4>Kinematics Equations</h4>
+    <ul>
+        <li>\(x(t)=\frac{1}{2}at^2+v_0t+x_0\) relates \(t\) and \(x\).</li>
+        <li>\(v(t)=at+v_0\) relates \(t\) and \(v\).</li>
+        <li>\(v(t)^2-{v_0}^2=2a(x(t)-x_0)\) relates \(x\) and \(v\).</li>
+    </ul>
+
+    <h4>Other Kinematics Ideas</h4>
+    <ul>
+        <li>\(\bar{v}=\frac{\Delta x}{\Delta t}\) and \(\bar{a}=\frac{\Delta v}{\Delta t}\) denote average velocity and acceleration.</li>
+        <li>\(v= \frac{dx}{dt}\) and \(a= \frac{dv}{dt}\) denote instantaneous velocity and acceleration.</li>
+        <li>\(\bar{s}=\frac{\text{distance}}{\Delta t}\) denotes average speed.</li>
+    </ul>
+
+    <h4>Forces</h4>
+    <p>In simplist terms, a force is a push or pull, thus naturally, forces are vectors. The unit of force is called the Newton, where \(1 N = 1 kg \cdot \frac{1 m}{s^2}\).</p>
+
+    <h4>Newton's Laws of Motion</h4>
+    <ol>
+        <li>Every object continues in its state of uniform velocity as long as no net force acts on it.</li>
+        <li>The relationship between force, mass, and acceleration, \(\Sigma \vec{F}=m\vec{a}\). Newton's first law is actually just a special case of this, where \(\Sigma \vec{F}=0\) and thus \(\vec{a}=0\).</li>
+        <li>If one object exerts a force on a second object, the second exerts back a force of equal magnitude in the opposite direction on the first. This can be expressed through the equation \(\vec{F}_{ab}=-\vec{F}_{ba}\) where the first subscript is the object on which the force is being exerted, while the second is the source.</li>
+    </ol>
+
+    <h4>Weight</h4>
+    <p>Weight is the force exerted on an object by gravity.</p>
+    \[\vec{F}_G = -m\vec{g}\]
+    <p>Near the surface of the earth, \(g=9.80 m/s^2\)</p>
+
 </body>
 
 <footer>
