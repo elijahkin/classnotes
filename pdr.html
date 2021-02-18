@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="https://latex.now.sh/style.css">
+    <title>Program & Data Representation</title>
+</head>
+
+<body>
+    <h1>PDR</h1>
+
+    <h4>Pointers</h4>
+    <ul>
+        <li>A pointer is a memory address (8 bytes) that holds an address of <i>something</i>.</li>
+        <li><b>&x</b> is the syntax for the memory address of variable <b>x</b>.</li>
+        <li><b>int * p;</b> is the syntax for declaring a new pointer <b>p</b> that points to integers.</li>
+        <li><b>*p</b> is the syntax for dereferencing a pointer, that is, following it to its pointee.</li>
+        <li>Setting a pointer equal to another pointer makes it point to the same location.</li>
+    </ul>
+
+    <h4>Dynamic Memory Allocation</h4>
+    <ul>
+        <li>Allocate things with the <b>new</b> keyword.</li>
+        <li>Deallocate things by providing the pointer to the <b>delete</b> keyword. This doesn't actually delete the pointer itself, but instead only deallocates the memory location it points to.</li>
+        <li>Unlike Java, C++ doesn't have garbage collection, so if you don't deallocate what you've allocated, you'll open a memory hole.</li>
+    </ul>
+
+    <h4>Visibility</h4>
+    <ul>
+        <li>Use the syntax <b>friend class x;</b> within a class' header file to allow other class <b>x</b> to access its private fields.</li>
+    </ul>
+
+    <h4>Common C++ Errors</h4>
+    <ul>
+        <li>Seg Fault: Trying to access memory outside of that which has been allocated.</li>
+        <li>Double Free: Trying to delete something that has already been deleted.</li>
+    </ul>
+</body>
+
+<footer>
+    <p>
+        <script>
+            var lastModified = new Date(document.lastModified);
+            var date = lastModified.getMonth() + 1 + "/" + lastModified.getDate() + "/" + lastModified.getFullYear();
+            document.write("Last modified on " + date + ".");
+        </script>
+        Please report any issues to <a href="mailto:elijah.m.kin@gmail.com">elijah.m.kin@gmail.com</a>!
+    </p>
+</footer>
+
+</html>
