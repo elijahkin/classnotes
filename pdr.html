@@ -31,6 +31,37 @@
         <li>Use the syntax <b>friend class x;</b> within a class' header file to allow other class <b>x</b> to access its private fields.</li>
     </ul>
 
+    <h4>The Big Four</h4>
+    <ul>
+        <li>Default Constructor</li>
+        <li>Copy Constructor</li>
+        <li>Destructor</li>
+        <li>operator=()</li>
+    </ul>
+
+
+    <h4>vector</h4>
+    <p>Replaces the tedious C++ built-in array. To use, you must <b>#include &ltvector&gt</b> Declared with <b>vector&ltint&gt v;</b> Iterate through a vector with iterators like below <b>for (vector&ltint&gt::iterator it = v.begin(); it != v.end(); it++ )</b></p>
+    <ul>
+        <li>size() - How many elements it is holding</li>
+        <li>capacity() - How many elements it can hold</li>
+        <li>reserve() - Sets the capacity</li>
+        <li>clear() - Removes all elements</li>
+        <li>empty() - Returns whether size == 0</li>
+        <li>push_back(Object e) - Appends an element</li>
+        <li>pop_back() - Pops the last element</li>
+        <li>front() - Returns the 0th element</li>
+        <li>at(int n) - Returns the nth element (bound checking)</li>
+        <li>operator[](int n) - Retuns the nth element (no bound checking)</li>
+        <li>back() - Returns the last element</li>
+        <li>insert(iterator pos, Object e) - Inserts element at pos</li>
+        <li>erase(iterator pos)</li>
+        <li>erase(iterator start, iterator end)</li>
+    </ul>
+
+    <h4>string</h4>
+    <p></p>
+
     <h4>Common C++ Errors</h4>
     <ul>
         <li>Seg Fault: Trying to access memory outside of that which has been allocated.</li>
