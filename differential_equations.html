@@ -72,17 +72,27 @@
         <li>If \(f\) is continuous over some rectangular region \(\alpha \lt t \lt \beta, \delta \lt y \lt \gamma\), but \(\frac{\partial f}{\partial y}\) is not, then there exists a solution, but its uniqueness is not guaranteed.</li>
     </ul>
 
-    <h4>What are spring-mass equations?</h4>
-    <p></p>
-    \[ mu''+\gamma u'+ku=F\]
-
     <h4>What are characteristic equations?</h4>
-    <p></p>
-    \[ \]
+    <p>Characteristic equations are polynomials found by substituting \(e^{rt}\) into linear homogeneous ODEs. For example, consider the differential equation below.</p>
+    \[ ay''+by'+cy=0 \]
+    <p>By substituting \(e^{rt}\) for \(y\) and differentiating it appropriately, the equation can be rewritten as\(\dots\)</p>
+    \[e^{rt}(ar^2+br+c)=0\]
+    <p>However, exponentials can never equal 0, therefore we arrive at the characteristic equation\(\dots\)</p>
+    \[ar^2+br+c=0\]
+    <p>Then, we need only find the roots of this characteristic equation to find the general solution to the ODE. However, there are four cases depending on the roots.</p>
+    \[ \begin{array} {|r|r|}\hline \text{2 Real Roots} & r=r_1, r=r_2 & y=c_1e^{r_1t}+c_2e^{r_2t}\\ \hline \text{1 Real Root} & r=r_1 & y=c_1e^{r_1t}+c_2te^{r_1t}\\ \hline \text{2 Imaginary Roots} & r=\pm\beta i & y=c_1\cos{\beta t}+c_2\sin{\beta t}\\ \hline \text{2 Complex Roots} & r=\alpha\pm\beta i & y=e^{\alpha t}(c_1\cos{\beta t}+c_2\sin{\beta t})\\ \hline \end{array} \]
 
     <h4>What is Euler's formula?</h4>
     <p></p>
     \[ e^{i\theta} = \cos{\theta} + i\sin{\theta} \]
+
+    <h4>What is the Wronskian?</h4>
+    <p>The Wronskian is a special determinant used to show whether you can find a unique solution to an ODE. If \(W(t_0)=0\) for an initial value problem then a unique solution does not exist.</p>
+    \[ W(t) = \begin{vmatrix} y_1(t) & y_2(t) \\ y_1'(t) & y_2'(t) \end{vmatrix} = y_1(t)y_2'(t) - y_2(t)y_1'(t)\]
+
+    <h4>What is Abel's Theorem?</h4>
+    <p></p>
+    \[ \]
 
     <h4>?</h4>
     <p></p>
