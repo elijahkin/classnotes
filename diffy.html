@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="https://latex.now.sh/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+    <script src="https://tikzjax.com/v1/tikzjax.js"></script>
+    <title>Differential Equations</title>
+</head>
+
+<body>
+    <h1>Final Exam Study Sheet</h1>
+
+    <h4>What is the existence and uniqueness theorem?</h4>
+    <p>The existence and uniquess theorem can give conditions for when solutions are unique, and more broadly, whether solutions exist at all. Given an initial value problem\(\dots\)</p>
+    \[ y' = f(t, y) \,\,\,\,\,\,\,\,\,\, y(t_0)=y_0\]
+    <ul>
+        <li>If \(f\) and \(\frac{\partial f}{\partial y}\) are continuous over some rectangular region \(\alpha \lt t \lt \beta, \delta \lt y \lt \gamma\) containing the point \((t_0, y_0)\), then there exists a <b>unique</b> solution around \(t_0\) over some subregion contained within \((\alpha, \beta)\).</li>
+        <li>If \(f\) is continuous over some rectangular region \(\alpha \lt t \lt \beta, \delta \lt y \lt \gamma\), but \(\frac{\partial f}{\partial y}\) is not, then there exists a solution, but its uniqueness is not guaranteed.</li>
+    </ul>
+
+    <h4>What is Euler's formula?</h4>
+    <p></p>
+    \[ e^{i\theta} = \cos{\theta} + i\sin{\theta} \]
+
+    <h4>What is the Wronskian?</h4>
+    <p>The Wronskian is a special determinant used to show whether you can find a unique solution to an ODE. If \(W(t_0)=0\) for an initial value problem then a unique solution does not exist.</p>
+    \[ W(t) = \begin{vmatrix} y_1(t) & y_2(t) \\ y_1'(t) & y_2'(t) \end{vmatrix} = y_1(t)y_2'(t) - y_2(t)y_1'(t)\]
+
+    <h4>What is Abel's Theorem?</h4>
+    <p></p>
+    \[ W(t)=Ce^{-\int p(t) dt}\]
+
+    <h4>What is variation of parameters?</h4>
+    \[u_1(t)=-\int\frac{y_2g(t)}{W(y_1,y_2)}dt \text{ and } u_2(t)=\int\frac{y_1g(t)}{W(y_1,y_2)}dt\]
+    \[Y_P(t)=y_1u_1+y_2u_2\]
+
+    <h4>What is the Laplace Transform?</h4>
+    <p></p>
+    \[ \mathcal{L}\{f(t)\} = \int_0^\infty f(t)e^{-st}\,dt = F(s)\]
+
+    <h4>What is the Dirac Delta Function?</h4>
+    <p></p>
+    \[\int_0^\infty\delta(t-c) dt = 1\]
+
+    <h4>What is the Heaviside Function?</h4>
+    <p></p>
+    \[u_c(t)\]
+
+    <h4>What are phase portraits?</h4>
+    \[ \begin{array} {|r|r|}\hline
+            \textbf{Eigenvalues} & \textbf{Origin Classification} & \textbf{Stability} \\ \hline
+            \text{2 Real with Opposite Signs} & \text{Saddle} & \text{Unstable} \\ \hline
+            \text{2 Real with Same Signs} & \text{Node} & \text{Stable if }\lambda \lt 0\\ \hline
+            \text{2 Imaginary } (\pm\beta i) & \text{Center} & \text{Stable} \\ \hline
+            \text{2 Complex } (\alpha\pm\beta i) & \text{Spiral} & \text{Unstable if }\alpha > 0 \\ \hline
+        \end{array} \]
+
+</body>
+
+
+</html>
