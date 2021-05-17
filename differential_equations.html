@@ -102,7 +102,20 @@
     <p></p>
     \[ \mathcal{L}\{f(t)\} = \int_0^\infty f(t)e^{-st}\,dt = F(s)\]
 
+    <h4>What is the Heaviside Step Function?</h4>
+    <p>The Heaviside step function is a function that evaluates to 0 when \(t \lt 0\) and 1 when \(t \gt 0\).</p>
+    \[\theta(t)\]
 
+    <h4>What is the Dirac Delta Function?</h4>
+    <p>The Dirac delta function, notated by \(\delta\), is the derivative of the Heaviside step function. It evaluates to \(0\) everywhere except at \(t=0\), where it is undefined, such that the definite integral of the function containing \(0\) evaluates to \(1\).</p>
+    \[ \frac{d}{dt} \theta(t) = \delta(t)\]
+    \[\int_0^\infty\delta(t-c) dt = 1\]
+
+    <h4>What is convolution?</h4>
+    <p></p>
+    \[ f(t) * g(t) = \int_0^t f(t-\tau)g(\tau) d\tau \]
+
+    <h4>What are phase portraits?</h4>
     \[ \begin{array} {|r|r|}\hline
             \textbf{Eigenvalues} & \textbf{Origin Classification} & \textbf{Stability} \\ \hline
             \text{2 Real with Opposite Signs} & \text{Saddle} & \text{Unstable} \\ \hline
